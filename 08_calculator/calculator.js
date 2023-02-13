@@ -22,19 +22,19 @@ const multiplied = a.reduce((total, input) => {return total * input;
 
 const power = function(a,b) {
 let accumulator = a
-for (let i = 0, power = b; i<power; i++) {
+for (let i = 1, power = b; i<power; i++) {
 	accumulator = accumulator * a
 }
 	return accumulator;
 };
 
 const factorial = function(a) {
+  if (a === 0) {return 1} else {
 	let factor = a
 	for (let i = 1; i<a; i++){
 	factor = factor * (a - i)
-		console.log(factor);
 	}
-	return factor;
+	return factor;}
 };
 
 // Do not edit below this line
