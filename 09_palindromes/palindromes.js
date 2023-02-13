@@ -1,8 +1,11 @@
 const palindromes = function (a) {
-  const char = /.|,/g;
-  console.log(a.replaceAll(char, ''));
+  const char = /[!.,\s]/g;
+  const sentence = a.replaceAll(char, '').toLowerCase();
+
+  const reverseArray = sentence.split('').reverse().join().replaceAll(char, '');
+
+  return sentence === reverseArray ? true : false;
 }
-  palindromes('the.dog, like');
 
 
 // Do not edit below this line
